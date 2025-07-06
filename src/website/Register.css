@@ -1,0 +1,32 @@
+.register-wrapper {
+    background-color: #3b3b3b;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .register-card {
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  .register-image {
+    width: 100%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  
+  .register-heading {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #212529;
+  }
+  
+  .register-button {
+    background-color: #d2b48c;
+    border: none;
+    margin-bottom: 1rem;
+  }
+  

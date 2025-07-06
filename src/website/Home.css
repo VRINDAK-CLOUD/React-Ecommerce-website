@@ -1,0 +1,27 @@
+.home-wrapper {
+    background: linear-gradient(135deg, rgb(90, 88, 88), rgb(243, 243, 243));
+    min-height: 100vh;
+    padding: 3rem 0;
+    color: white;
+  }
+  
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+    justify-content: center;
+  }
+  
+  .product-card {
+    width: 18rem;
+  }
+  
+  .card-borderless-list .list-group-item {
+    border: none;
+  }
+  
+  .add-to-cart-btn {
+    background-color: #d2b48c;
+    border: none;
+  }
+  

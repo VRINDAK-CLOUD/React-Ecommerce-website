@@ -1,0 +1,14 @@
+.view-product-container {
+    margin-top: 3rem;
+  }
+  
+  .view-product-card {
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  .spinner-container {
+    text-align: center;
+    margin-top: 5rem;
+  }
+  
