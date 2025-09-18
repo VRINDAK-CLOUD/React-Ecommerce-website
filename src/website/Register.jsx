@@ -14,6 +14,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth, db } from './Firebase';
 import { setDoc, doc } from 'firebase/firestore';
+import { useNavigate } from 'react-router-dom';  // 👈 import hook
 import './Register.css'; 
 
 function Register() {
@@ -21,6 +22,8 @@ function Register() {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [lastname, setLastname] = useState("");
+
+  const navigate = useNavigate(); 
 
   const notifySuccess = () => toast.success("Registration successful!", { position: "top-center" });
   const notifyError = (err) => toast.error(err.message || "Registration failed.", { position: "top-center" });
@@ -30,12 +33,20 @@ function Register() {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-      notifySuccess();
+
       await setDoc(doc(db, "Users", user.uid), {
         email: user.email,
         firstName: name,
         lastName: lastname,
       });
+
+      notifySuccess();
+
+     
+      setTimeout(() => {
+        navigate("/home");
+      }, 1500);
+
     } catch (error) {
       notifyError(error);
       console.error("Registration error:", error);
